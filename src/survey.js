@@ -68,5 +68,5 @@ function witness(poopshoot){
 
 module.exports = {
     getSurvey:function(){return getSurvey()},
-    submitSurvey: function(surveyResults){submitSurvey()}
+    submitSurvey: function(surveyResults){submitSurvey(surveyResults)}
 }
