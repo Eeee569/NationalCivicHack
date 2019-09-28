@@ -41,3 +41,8 @@ const submitSurvey = (surveyResults) => {
     
     return isViolation;
 }
+
+module.exports = {
+    getSurvey:function(){return getSurvey()},
+    submitSurvey: function(surveyResults){return submitSurvey()}
+}
