@@ -1,3 +1,4 @@
+const email = require("./Email.js");
 const survey = {
     questions: [
         {
@@ -50,7 +51,7 @@ const submitSurvey = (surveyResults) => {
     ${witness(surveyResults.addWitness)}\n\n
     This report was submitted on ${surveyResults.submitDate}`;
 
-    return body;
+    email.sendEmail(body,"Temp Subject","willwolfe1@gmail.com");
 };
 
 function witness(poopshoot){
