@@ -20,17 +20,20 @@ const survey = {
 }
 
 const surveyResults = {
-    answerToQuestion1: "I'd like to report that my rights have been violated" ,
-    answerToQuestion2: "Immigration",
-    report: true,
-    learn: false,
-    immigration: true,
-    police: false
-
-}
-
-const Violation = {
-    isViolation: true
+    badgeNum:"",
+    patrolCarNum:"",
+    agency:"ICE",
+    addWitness:[
+    {
+        name: "",
+        witnessNum: "",
+        witnessEmail: "",
+    }
+],
+    contactName:"",
+    contactEmail:"",
+    submitDate:"",
+    reportDate:""
 }
 
 const getSurvey = () => {
@@ -38,11 +41,31 @@ const getSurvey = () => {
 }
 
 const submitSurvey = (surveyResults) => {
-    
-    return isViolation;
+    let body = `This is a report generated on the behalf of ${surveyResults.contactName}. \n \n 
+    ${surveyResults.contactName} feels their rights were violated by ${surveyResults.agency} on ${surveyResults.reportDate}.
+    \n ${surveyResults.contactName} has filled out the report to the best of thier ability: \n 
+    Agency: ${surveyResults.agency}\n
+    Badge Number: ${surveyResults.badgeNum}\n
+    Patrol Car Number: ${surveyResults.patrolCarNum}\n
+    ${witness(surveyResults.addWitness)}\n\n
+    This report was submitted on ${surveyResults.submitDate}`;
+
+    return body;
+};
+
+function witness(poopshoot){
+    const mainString = '';
+    for (let i = 0; i < poopshoot.length; i++){
+        const string1 = `Witness name: ${poopshoot.name[i]}`
+        const string2 = `Witness number: ${poopshoot.witnessNum[i]}`
+        const string3 = `Witness email: ${poopshoot.witnessEmail[i]}`
+        mainString += `${string1},\n ${string2},\n ${string3}\n`;
+    }
+    return mainString;
 }
+
 
 module.exports = {
     getSurvey:function(){return getSurvey()},
-    submitSurvey: function(surveyResults){return submitSurvey()}
+    submitSurvey: function(surveyResults){submitSurvey()}
 }
