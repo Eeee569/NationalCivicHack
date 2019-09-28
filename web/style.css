@@ -1,0 +1,27 @@
+element{
+    --red: #c70f2eff;
+    --blue: #002673ff;
+    --yellow: #f5dc0fff;
+    --white: #ffffffff;
+}
+
+body, html{
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    width: 100%;
+}
+.survey-container{
+    width: 80%;
+    height: 1000px;
+}
+.question h1{
+
+}
+.answer ul{
+ list-style-type: none;   
+}
+.answer button{
+    border:none;
+    background-color: var(--red);
+}
