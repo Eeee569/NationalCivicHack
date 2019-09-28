@@ -1,0 +1,19 @@
+{
+  "name": "nationalcivichack",
+  "version": "1.0.0",
+  "description": "a know your rights website for national day of civic hacking",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eeee569/NationalCivicHack.git"
+  },
+  "author": "william wolfe, walter jenkins, saad sharieff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eeee569/NationalCivicHack/issues"
+  },
+  "homepage": "https://github.com/Eeee569/NationalCivicHack#readme"
+}
