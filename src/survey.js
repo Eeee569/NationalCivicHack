@@ -57,9 +57,9 @@ const submitSurvey = (surveyResults) => {
 function witness(poopshoot){
     const mainString = '';
     for (let i = 0; i < poopshoot.length; i++){
-        const string1 = `Witness name: ${poopshoot.name[i]}`;
-        const string2 = `Witness number: ${poopshoot.witnessNum[i]}`;
-        const string3 = `Witness email: ${poopshoot.witnessEmail[i]}`;
+        const string1 = `Witness name: ${poopshoot[i].name}`;
+        const string2 = `Witness number: ${poopshoot[i].witnessNum}`;
+        const string3 = `Witness email: ${poopshoot[i].witnessEmail}`;
         mainString += `${string1},\n ${string2},\n ${string3}\n`;
     }
     return mainString;
