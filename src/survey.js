@@ -55,7 +55,7 @@ const submitSurvey = (surveyResults) => {
 };
 
 function witness(poopshoot){
-    const mainString = '';
+    let mainString = '';
     for (let i = 0; i < poopshoot.length; i++){
         const string1 = `Witness name: ${poopshoot[i].name}`;
         const string2 = `Witness number: ${poopshoot[i].witnessNum}`;
